@@ -1,3 +1,5 @@
+# To display frequency of each word in a file.
+
 def get_file_words_as_list():
 	# Loop through the file words and split the words into a list
 	for line in file_handle:
