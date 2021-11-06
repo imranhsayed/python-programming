@@ -10,12 +10,12 @@ try:
 	)
 	connection_cursor = database_connection.cursor()
 
-	sql_statement = "UPDATE EMP_SELECTION SET AGE=AGE+1 WHERE GENDER='M'"
+	sql_statement = "DELETE FROM EMP_SELECTION WHERE AGE<18"
 
 	connection_cursor.execute(sql_statement)
 
 	database_connection.commit()
-	print(connection_cursor.rowcount, "record(s) updated.")
+	print(connection_cursor.rowcount, "record(s) deleted.")
 
 except mysql.connector.Error as error:
 	print("parameterized query failed {}".format(error))
