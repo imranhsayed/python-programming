@@ -10,12 +10,8 @@ database_connection = mysql.connector.connect(
 
 connection_cursor = database_connection.cursor()
 connection_cursor.execute(
-	"CREATE TABLE EMP_SELECTION ("
-	"FIRST_NAME VARCHAR(15) NOT NULL,"
-	"LAST_NAME VARCHAR(15) NOT NULL,"
-	"AGE INT NOT NULL,"
-	"GENDER VARCHAR(10) NOT NULL,"
-	"INCOME INT NOT NULL"
-	")")
+	"ALTER TABLE EMP_SELECTION "
+	"ADD ADDRESS VARCHAR(50)"
+)
 
 database_connection.close()
