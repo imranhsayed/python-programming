@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 responses = [1, 2, 5, 4, 3, 5, 2, 1, 3, 3, 1, 4, 3, 3, 3, 2, 3, 3, 2, 5]  # Responses list
 uni_responses = {}  # Initialize Dictionary
+
 for r in responses:  # Iterate through the list
 	if r in uni_responses:  # Get ratings frequency. if rating already in dictionary
 		uni_responses[r] += 1  # Add one to it's value
@@ -32,3 +33,5 @@ ax.bar(sort_d.keys(), sort_d.values())  # Plot frequencies
 ax.legend(['Percentage', 'Frequency'])  # Set legend
 ax.set_xlabel('Ratings')  # Set X label
 ax.set_title("Frequency and Percentages vs Rating")  # Set title
+
+plt.show()
